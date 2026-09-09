@@ -1,9 +1,6 @@
-# No starter code provided — write the full function yourself.
-# Function name: create_book_record
-# Parameters: title, author, year
-# Must return: (title, author, year) as a tuple
+def dedupe_preserve_order(items):
+    # TODO: use a set to track seen values while building a new list
+    # that preserves the original order of first appearances
+    return list(dict.fromkeys(items))
 
-def create_book_record(title, author, year):
-    return (title, author, year)
-
-print(create_book_record("Dune", "Frank Herbert", 1965))
+print(dedupe_preserve_order([3, 1, 3, 2, 1]))
