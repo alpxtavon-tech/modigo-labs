@@ -1,8 +1,9 @@
-def compare_hobbies(person1_hobbies, person2_hobbies):
-    dicts = {}
-    dicts["shared"] = person1_hobbies & person2_hobbies
-    dicts["only_person1"] = person1_hobbies - person2_hobbies
-    dicts["only_person2"] = person2_hobbies - person1_hobbies
-    return dicts
+# No starter code provided — write the full function yourself.
+# Function name: create_book_record
+# Parameters: title, author, year
+# Must return: (title, author, year) as a tuple
 
-print(compare_hobbies({"reading", "coding"}, {"coding", "gaming"}))
+def create_book_record(title, author, year):
+    return (title, author, year)
+
+print(create_book_record("Dune", "Frank Herbert", 1965))
