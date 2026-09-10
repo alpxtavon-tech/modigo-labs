@@ -1,5 +1,8 @@
-def merge_tags(tags1, tags2):
-    merged = tags1 | tags2
-    return merged
+def split_bill(bill, tip_percent, people):
+    tip = bill * (tip_percent / 100)
+    total_bill = bill + tip
+    amount_per_person = total_bill / people
 
-print(merge_tags({"python", "web"}, {"web", "css"}))
+    return round(amount_per_person, 2)
+
+print(split_bill(100, 10, 2))
