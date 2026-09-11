@@ -1,7 +1,7 @@
-def unmatched_skus(warehouse_a, warehouse_b):
-    all_skus = warehouse_a.union(warehouse_b)
-    shared_skus = warehouse_a.intersection(warehouse_b)
-    unmatched = all_skus.difference(shared_skus)
+def path_hits_blocked(blocked, path):
+    for position in path:
+        if position in blocked:
+            return True
+    return False
 
-    return unmatched
-print(unmatched_skus({"A1", "A2"}, {"A2", "A3"}))
+print(path_hits_blocked({(1,1), (2,2)}, [(0,0), (1,1)]))
