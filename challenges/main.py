@@ -1,8 +1,7 @@
-def split_bill(bill, tip_percent, people):
-    tip = bill * (tip_percent / 100)
-    total_bill = bill + tip
-    amount_per_person = total_bill / people
+def unmatched_skus(warehouse_a, warehouse_b):
+    all_skus = warehouse_a.union(warehouse_b)
+    shared_skus = warehouse_a.intersection(warehouse_b)
+    unmatched = all_skus.difference(shared_skus)
 
-    return round(amount_per_person, 2)
-
-print(split_bill(100, 10, 2))
+    return unmatched
+print(unmatched_skus({"A1", "A2"}, {"A2", "A3"}))
