@@ -1,6 +1,4 @@
-def dedupe_preserve_order(items):
-    # TODO: use a set to track seen values while building a new list
-    # that preserves the original order of first appearances
-    return list(dict.fromkeys(items))
+def create_greeting(recipient_name, sender_name="A Friend", closing="Best wishes"):
+    return (f"Dear {recipient_name}, {closing}! From, {sender_name}.")
 
-print(dedupe_preserve_order([3, 1, 3, 2, 1]))
+print(create_greeting("Ada"))
